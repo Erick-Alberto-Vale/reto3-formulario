@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de la persona Usuaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="contenedor-formulario">
+    <form id="formulario-registro" class="tarjeta">
+      <div class="encabezado">
+        <h1>Registro de la persona Usuaria</h1>
+        <div class="cambio-tema">
+          <span class="texto-tema">Oscuro</span>
+          <label class="interruptor">
+            <input type="checkbox" id="interruptor-tema">
+            <span class="pista"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+      </div>
+
+      <div class="campo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+      </div>
+
+      <div class="campo">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Crea una contraseña" required>
+      </div>
+
+      <div class="campo">
+        <label for="descripcion">Cuéntanos un poco sobre ti</label>
+        <textarea id="descripcion" name="descripcion" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
+      </div>
+
+      <fieldset class="campo intereses">
+        <legend>¿Cuáles son tus intereses?</legend>
+
+        <div class="opcion-checkbox">
+          <input type="checkbox" id="tecnologia" name="intereses" value="Tecnología">
+          <label for="tecnologia">Tecnología</label>
+        </div>
+
+        <div class="opcion-checkbox">
+          <input type="checkbox" id="arte" name="intereses" value="Arte">
+          <label for="arte">Arte</label>
+        </div>
+
+        <div class="opcion-checkbox">
+          <input type="checkbox" id="deporte" name="intereses" value="Deporte">
+          <label for="deporte">Deporte</label>
+        </div>
+
+        <div class="opcion-checkbox">
+          <input type="checkbox" id="moda" name="intereses" value="Moda">
+          <label for="deporte">Moda</label>
+        </div> 
+
+        <div class="opcion-checkbox">
+          <input type="checkbox" id="biologia" name="intereses" value="biologia">
+          <label for="deporte">Biología</label>
+        </div> 
+      </fieldset>
+
+      <button type="submit" class="boton-registro">Registrarse</button>
+    </form>
+  </main>
+
+  <script>
+    const interruptorTema = document.getElementById('interruptor-tema');
+    interruptorTema.addEventListener('change', () => {
+      document.body.classList.toggle('tema-oscuro', interruptorTema.checked);
+    });
+  </script>
+
+</body>
+</html>
